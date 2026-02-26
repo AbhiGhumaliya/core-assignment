@@ -18,7 +18,7 @@ const navItems = [
     label: 'People',
     icon: '/assets/icons/people.svg',
     path: '/people',
-    hasChevron: true,
+    hasChevron: false,
     // isSpecial: true,
   },
   {
@@ -76,7 +76,8 @@ function Sidebar() {
               style={{
                 backgroundColor: isActive ? '#ffffff' : 'transparent',
                 color: isActive ? '#947550' : '#ffffff',
-                height: '53px'
+                height: '53px',
+                opacity: isActive ? 1 : 0.6,
               }}
               onMouseEnter={(e) => {
                 if (!isActive) e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'

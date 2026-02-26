@@ -1,6 +1,16 @@
+// Design spec: 1440×1024 viewport → card 248px × 267px. Responsive: scales down on smaller screens, stays fixed on larger.
+const CARD_WIDTH = 248
+const CARD_HEIGHT = 267
+
 function EmployeeCard({ name, role, avatar }) {
   return (
-    <div className="bg-white border border-divider rounded-[24px] p-6 flex flex-col items-center gap-5" style={{ height: '267px', width: '248px' }}>
+    <div
+      className="bg-white border border-divider rounded-[24px] p-6 flex flex-col items-center gap-5 shrink-0"
+      style={{
+        width: 'min(248px, 100%)',
+        aspectRatio: `${CARD_WIDTH} / ${CARD_HEIGHT}`,
+      }}
+    >
       {/* Avatar — pre-composed circular photo + role badge from Figma */}
       <img
         src={avatar}
