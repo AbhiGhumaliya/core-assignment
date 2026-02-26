@@ -102,7 +102,6 @@ function Sidebar() {
 
               {/* Icon */}
               {isActive && item.isSpecial ? (
-                /* People active: brown square container with white icon */
                 <span
                   className="flex items-center justify-center rounded-[3px] shrink-0"
                   style={{ width: 15, height: 15, backgroundColor: '#947550', padding: 2 }}
