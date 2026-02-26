@@ -1,0 +1,58 @@
+/* Brother 1816 is a commercial font; Plus Jakarta Sans is used as the closest free alternative */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* Brand colors */
+  --color-primary: #947550;
+  --color-dark: #3d3936;
+  --color-muted: #f7f7f7;
+  --color-divider: #e5e5e4;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    overflow: hidden;
+    background-color: #f7f7f7;
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    background-color: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Font weights — use when you prefer CSS classes over Tailwind */
+/* .font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+} */
+
+/* Hide scrollbar while keeping scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
