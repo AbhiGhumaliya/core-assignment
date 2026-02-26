@@ -13,22 +13,7 @@ const routeTitles = {
 
 function TopBar() {
   const location = useLocation()
-  const pageTitle = routeTitles[location.pathname] || 'CORE HR'
-
-  // const [time, setTime] = useState('')
-
-  // useEffect(() => {
-  //   const updateTime = () => {
-  //     const now = new Date()
-  //     const h = String(now.getHours()).padStart(2, '0')
-  //     const m = String(now.getMinutes()).padStart(2, '0')
-  //     const s = String(now.getSeconds()).padStart(2, '0')
-  //     setTime(`${h}:${m}:${s}`)
-  //   }
-  //   updateTime()
-  //   const timer = setInterval(updateTime, 1000)
-  //   return () => clearInterval(timer)
-  // }, [])
+  const pageTitle = routeTitles[location.pathname] || 'CORE HR';
 
   return (
     <div className="flex items-center justify-between h-20 shrink-0 bg-white rounded-[20px] py-6 px-4">

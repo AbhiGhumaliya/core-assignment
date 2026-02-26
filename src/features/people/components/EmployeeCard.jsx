@@ -37,7 +37,7 @@ function EmployeeCard({ name, role, avatar }) {
             {role}
           </span>
           <img
-            src="/assets/icons/Indicator_2.svg"
+            src="/assets/icons/Indicator.svg"
             alt="Status indicators"
           />
         </div>
