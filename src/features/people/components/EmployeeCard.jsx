@@ -11,10 +11,14 @@ function EmployeeCard({ name, role, avatar }) {
         aspectRatio: `${CARD_WIDTH} / ${CARD_HEIGHT}`,
       }}
     >
-      {/* Avatar — pre-composed circular photo + role badge from Figma */}
+      {/* Avatar — lazy load and async decode to avoid blocking; explicit size reduces layout shift */}
       <img
         src={avatar}
         alt={name}
+        width={133}
+        height={133}
+        loading="lazy"
+        decoding="async"
         className="w-[133px] h-[133px] object-contain shrink-0"
       />
 
@@ -39,6 +43,10 @@ function EmployeeCard({ name, role, avatar }) {
           <img
             src="/assets/icons/Indicators.svg"
             alt="Status indicators"
+            width={49}
+            height={10}
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
