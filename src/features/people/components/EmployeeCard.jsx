@@ -5,10 +5,12 @@ const CARD_HEIGHT = 267
 function EmployeeCard({ name, role, avatar }) {
   return (
     <div
-      className="bg-white border border-divider rounded-[24px] p-6 flex flex-col items-center gap-5 shrink-0"
+      className="bg-white border border-divider rounded-[24px] p-6 flex flex-col items-center gap-5 shrink-0 box-border"
       style={{
         width: 'min(248px, 100%)',
-        aspectRatio: `${CARD_WIDTH} / ${CARD_HEIGHT}`,
+        height: CARD_HEIGHT,
+        minHeight: CARD_HEIGHT,
+        maxHeight: CARD_HEIGHT,
       }}
     >
       {/* Avatar — lazy load and async decode to avoid blocking; explicit size reduces layout shift */}

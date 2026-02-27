@@ -9,7 +9,7 @@ A single-page HR application built with React and Vite. It includes a sidebar na
 | **UI** | React 19 |
 | **Build** | Vite 7 |
 | **Routing** | React Router DOM 7 |
-| **Styling** | Tailwind CSS 4 (Plus Jakarta Sans) |
+| **Styling** | Tailwind CSS 4, Brother 1816 (custom font) |
 | **Lint** | ESLint 9 (flat config, React Hooks, React Refresh) |
 | **React Compiler** | babel-plugin-react-compiler (optional auto-memoization) |
 
@@ -32,6 +32,14 @@ npm run preview
 npm run lint
 ```
 
+## Fonts
+
+Custom font **Brother 1816** (multiple weights) lives in `public/fonts/` and is loaded in `src/index.css`. Used as the main UI font via Tailwind.
+
+## Deploy
+
+The app is set up for [Vercel](https://vercel.com): `vercel.json` configures the build and SPA rewrites. Run `vercel` in the project root or connect the repo in the Vercel dashboard.
+
 ## Project Structure
 
 ```
@@ -42,7 +50,7 @@ src/
 ├── layout/               # Sidebar, TopBar, MainLayout
 ├── shared/components/   # MaskIcon (reusable icon)
 └── features/             # Feature-based pages
-    ├── people/           # People page, employee grid, search, pagination
+    ├── people/           # People: EmployeeCard, EmployeeGrid, SearchAndActions, NoSearchResults, PaginationBar, data/employees
     ├── home/
     ├── myInfo/
     ├── teamManagement/
@@ -59,11 +67,6 @@ src/
 | `/` | Redirects to `/people` |
 | `/people` | People (employee list) |
 | `/home`, `/my-info`, `/team-management`, `/project-setup`, `/hiring`, `/report`, `/settings` | Placeholder “Coming Soon” pages |
-
-## Documentation
-
-- **[PROJECT_GUIDE.md](./PROJECT_GUIDE.md)** — Full project overview, libraries, module map, routing, and styling.
-- **[docs/file-explanations/](./docs/file-explanations/)** — Per-file docs with purpose, logic, and dependencies for every source file.
 
 ## License
 
